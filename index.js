@@ -2,7 +2,7 @@ const express = require('express');
 require('dotenv').config();
 const router = require('./routes/index');
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 const db_URL = process.env.db_URL;
 const path = require('path');
 app.use('/upload', express.static(path.join('upload')));
